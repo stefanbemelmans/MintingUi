@@ -1,0 +1,30 @@
+﻿@using Herc.Pwa.Client.Features.Erc1155.Transactions.Components.TransactionsList
+@inherits TransactionListBase
+<div class="pl-1" style="overflow-x:auto;">
+  Transaction Count: @TransactionCount
+  <table>
+    <tr>
+      <th>Hash</th>
+      <th>Asset</th>
+      <th>Time</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Platform</th>
+      <th>Quantity</th>
+    </tr>
+
+    @foreach (var transaction in Transactions)
+    {
+      <tr>
+        <td>@GetSubString(transaction.Hash)</td>
+        <td>Sample Token Name</td>
+        <td>@transaction.Timestamp</td>
+        <td>@GetSubString(transaction.From.Address)</td>
+        <td>@GetSubString(transaction.To.Address)</td>
+        <td>Platform Name</td>
+        <td>@transaction.AssetQuantity</td>
+      </tr>
+
+    }
+  </table>
+</div>

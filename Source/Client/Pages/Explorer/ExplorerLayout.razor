@@ -1,0 +1,21 @@
+﻿@inherits ExplorerLayoutBase
+@layout Herc.Pwa.Client.Layouts.Hercules.HercLayout
+
+<h1>ERC-1155 Explorer</h1>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  @foreach (var tab in Tabs)
+  {
+    <li class="nav-item">
+      <a class="nav-link @tab.ClassName"
+         id="home-tab"
+         data-toggle="tab"
+         href="/explorer/@tab.Route"
+         role="tab"
+         aria-controls="home"
+         aria-selected="true">@tab.Label</a>
+    </li>
+  }
+</ul>
+
+@Body

@@ -1,0 +1,12 @@
+﻿@inherits TransactionDetailBase
+  <div class="flex-column pl-3">
+    Transaction Details here!
+    <div class="row">Status: Success!</div>
+    <div class="row">Hash: @Transaction.Hash</div>
+    <div class="row">Time: @convertedTime(Transaction.Timestamp )</div>
+    <div class="row">From: @Transaction.From.Address</div>
+    <div class="row">To: @Transaction.To.Address</div>
+    <div class="row">Value: @Transaction.Value</div>
+    <div class="row">Fee: @Transaction.Fee</div>
+    <div class="row">Nonce: @Transaction.Nonce</div>
+  </div>

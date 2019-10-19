@@ -1,0 +1,29 @@
+﻿@inherits TransactionListBase
+<div class="pl-1" style="overflow-x:auto;">
+  Transaction Count: @TransactionCount
+  <table>
+    <tr>
+      <th>Hash</th>
+      <th>Block</th>
+      <th>Time</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Value</th>
+      <th>Fee</th>
+    </tr>
+
+    @foreach (var transaction in Transactions)
+    {
+      <tr>
+        <td><a href=@TransactionDetailsUrl(transaction.Hash)>@GetSubString(transaction.Hash)</a></td>
+        <td>@transaction.Blocknumber</td>
+        <td>@transaction.Timestamp</td>
+        <td>@GetSubString(transaction.From.Address)</td>
+        <td>@GetSubString(transaction.To.Address)</td>
+        <td>@transaction.Value</td>
+        <td>@transaction.Fee</td>
+      </tr>
+
+    }
+  </table>
+</div>

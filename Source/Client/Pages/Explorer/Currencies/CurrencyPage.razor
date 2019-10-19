@@ -1,0 +1,46 @@
+﻿@page "/explorer/currencies/{CurrencyId}"
+@page "/explorer/currencies/{CurrencyId}/dies"
+@page "/explorer/currencies/{CurrencyId}/tokens"
+@page "/explorer/currencies/{CurrencyId}/holders"
+@page "/explorer/currencies/{CurrencyId}/transactions"
+@page "/explorer/currencies/{CurrencyId}/melts"
+@page "/explorer/currencies/{CurrencyId}/mints"
+
+
+@inherits CurrencyPageBase
+@layout CurrencyLayout
+
+@using Herc.Pwa.Client.Features.Erc1155.Die.Components
+
+<h1>Currency</h1>
+
+<p>Reference: https://enjinx.io/eth/platforms</p>
+<p>Id: @CurrencyId</p>
+<p>Route: @RouteState.Route</p>
+<p>ActiveTab: @ActiveTab</p>
+
+<div class="tab-content">
+  <div class="tab-pane  active" role="tabpanel" aria-labelledby="currencies tab">
+    @switch (ActiveTab)
+    {
+      case "dies":
+        <DieList Dies=@Dies />
+        break;
+      case "holders":
+        <p>Holders</p>
+        break;
+      case "transactions":
+        <p>Transactions</p>
+        break;
+      case "mints":
+        <p>Mints</p>
+        break;
+      case "melts":
+        <p>Melts</p>
+        break;
+      default:
+        <p>Details</p>
+        break;
+    }
+  </div>
+</div>

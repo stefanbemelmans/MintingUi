@@ -1,0 +1,9 @@
+﻿@page "/explorer/currencies"
+@inherits CurrenciesPageBase
+@using Herc.Pwa.Client.Features.Erc1155.Currencies.Components
+
+<div class="tab-content">
+  <div class="tab-pane  active" role="tabpanel" aria-labelledby="currencies tab">
+    <CurrencyList Currencies="@Currencies" />
+  </div>
+</div>

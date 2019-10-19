@@ -1,0 +1,11 @@
+﻿@namespace Herc.Pwa.Client.Features.Erc1155.Currencies.Components
+@inherits CurrencyItemBase
+<div class="card text-center">
+  <img src=@Currency.ImageUrl card="card-img-top" alt="@Currency.Name Image" width="250">
+  <div class="card-body">
+    <h5 class="card-title"><a class="card-link" href="@CurrencyDetailsUrl">@Currency.Name</a></h5>
+    <div class="currency-details">
+      @DieCount Dies ("Currency.MintedTokenList.Count") Tokens
+    </div>
+  </div>
+</div>

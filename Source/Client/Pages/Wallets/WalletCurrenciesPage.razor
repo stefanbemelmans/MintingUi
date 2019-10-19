@@ -1,0 +1,22 @@
+﻿@page "/WalletId/currencies"
+@inherits WalletCurrenciesPageBase
+@using Herc.Pwa.Client.Features.Erc1155.Currencies.Components
+
+<h1>Wallet Currencies</h1>
+
+<span>Wallet Id: @WalletId</span>
+
+@foreach (var Currency in CurrencyState.Currencies)
+{
+  <div class="card text-center">
+    <img src=@Currency.ImageUrl card="card-img-top" alt="@Currency.Name Image" width="250">
+    <div class="card-body">
+     @* <h5 class="card-title"><a class="card-link" href="@WalletDiesPage.Route +  @Currency.Guid" >@Currency.Name</a></h5>*@
+      <div class="currency-details">
+        @Currency.Guid Id
+        @Currency.Description
+        @*@Currency.Dies.Count(); Dies (@Currency.MintedTokenList.Count ?? "No") Tokens*@
+      </div>
+    </div>
+  </div>
+}

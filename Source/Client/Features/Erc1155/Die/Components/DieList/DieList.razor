@@ -1,0 +1,8 @@
+﻿@namespace Herc.Pwa.Client.Features.Erc1155.Die.Components
+@inherits DieListBase
+<div class="card-group">
+  @foreach (var Die in Dies)
+  {
+    <DieItem DieId="@Die.Guid"></DieItem>
+  }
+</div>

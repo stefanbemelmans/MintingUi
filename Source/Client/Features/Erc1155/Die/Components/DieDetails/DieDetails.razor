@@ -1,0 +1,24 @@
+﻿@inherits DieDetailsBase
+<div id="dieDetailsComponent" class="card">
+  <div class="card-header text-center">
+    <img src=@Die.Image card="card-img-top" alt="https://via.placeholder.com/250" width="250">
+    <h5 class="card-title">@Die.Name</h5>
+    <h5> Die Id: @Die.Id</h5>
+    <div class="card-body">
+      <p>@Die.Description</p>
+      <div class="col text-left">
+        Total Supply: @Die.TotalSupply
+        Transferable: @Die.Transferable
+        Number of Holders: @Die.Holders
+      </div>
+      <div class="col">
+        <h5>Melting</h5>
+          <div class="text-left">
+            Melt Fee Percentage: @Die.MeltFeePercentage
+            Melt Type: @Die.MeltType
+            Melt Value: @Die.MeltValue
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

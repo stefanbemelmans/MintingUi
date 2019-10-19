@@ -1,0 +1,10 @@
+﻿@namespace Herc.Pwa.Client.Features.Erc1155.Token.Components
+@inherits TokenListBase
+
+
+<div class="card-group">
+  @foreach (var Token in Tokens)
+  {
+    <TokenItem TokenId="@Token.Guid"></TokenItem>
+  }
+</div>

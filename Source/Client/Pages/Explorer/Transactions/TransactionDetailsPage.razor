@@ -1,0 +1,7 @@
+﻿@inherits TransactionDetailsPageBase
+@page "/explorer/transactions/{TransactionHash}"
+
+<div>
+  <h3><a href="/explorer/transactions"> Back To Transactions</a></h3>
+  <Herc.Pwa.Client.Features.Erc1155.Transactions.Components.TransactionDetail TransactionHash=@TransactionHash />
+</div>

@@ -1,0 +1,19 @@
+﻿@inherits CurrencyLayoutBase
+@layout Herc.Pwa.Client.Layouts.Hercules.HercLayout
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  @foreach (var tab in Tabs)
+  {
+    <li class="nav-item">
+      <a class="nav-link @tab.ClassName"
+         id="home-tab"
+         data-toggle="tab"
+         href="@tab.Route.BuildRelativeUriString()"
+         role="tab"
+         aria-controls="home"
+         aria-selected="true">@tab.Label</a>
+    </li>
+  }
+</ul>
+
+@Body
