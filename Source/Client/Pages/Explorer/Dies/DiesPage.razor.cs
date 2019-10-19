@@ -1,7 +1,7 @@
-﻿namespace Herc.Pwa.Client.Pages.Explorer.Dies
+﻿namespace MintingUi.Client.Pages.Explorer.Dies
 {
   using MintingUi.Client.Features.Base.Components;
-  using Herc.Pwa.Client.Features.Erc1155.Die;
+  using MintingUi.Client.Features.Erc1155.Die;
   using System.Collections.Generic;
 
   public class DiesPageBase : BaseComponent

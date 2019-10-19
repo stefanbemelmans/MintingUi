@@ -1,4 +1,4 @@
-﻿namespace Herc.Pwa.Client.Pages.Explorer
+﻿namespace MintingUi.Client.Pages.Explorer
 {
   using MintingUi.Client.Features.Base.Components;
   using Microsoft.AspNetCore.Components;

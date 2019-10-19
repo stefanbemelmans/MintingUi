@@ -5,11 +5,11 @@
   using MintingUi.Client.Features.Counter;
   using MintingUi.Client.Features.WeatherForecast;
   using MintingUi.Client.Features.EventStream;
-  using Herc.Pwa.Client.Features.Erc1155.Currencies;
-  using Herc.Pwa.Client.Features.Erc1155.Die;
+  using MintingUi.Client.Features.Erc1155.Currencies;
+  using MintingUi.Client.Features.Erc1155.Die;
   using BlazorState.Features.Routing;
-  using Herc.Pwa.Client.Features.Erc1155.Token;
-  using Herc.Pwa.Client.Features.Erc1155.Transactions;
+  using MintingUi.Client.Features.Erc1155.Token;
+  using MintingUi.Client.Features.Erc1155.Transactions;
 
   /// <summary>
   /// Makes access to the State a little easier and by inheriting from

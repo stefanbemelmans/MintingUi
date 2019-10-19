@@ -1,4 +1,4 @@
-﻿namespace Herc.Pwa.Client.Features.Erc1155.Token
+﻿namespace MintingUi.Client.Features.Erc1155.Token
 {
   using BlazorState;
   using System;

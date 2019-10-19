@@ -1,8 +1,8 @@
-﻿namespace Herc.Pwa.Client.Pages.Erc1155
+﻿namespace MintingUi.Client.Pages.Erc1155
 {
   using BlazorState;
   using MintingUi.Client.Features.Base.Components;
-  using Herc.Pwa.Client.Features.Erc1155.Die;
+  using MintingUi.Client.Features.Erc1155.Die;
   using Microsoft.AspNetCore.Components;
   using System;
 

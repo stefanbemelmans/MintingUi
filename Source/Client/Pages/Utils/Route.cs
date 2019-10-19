@@ -1,5 +1,5 @@
 ﻿#nullable enable
-namespace Herc.Pwa.Client.Pages.Utils
+namespace MintingUi.Client.Pages.Utils
 {
   using System;
   using System.Linq;

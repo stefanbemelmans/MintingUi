@@ -1,4 +1,4 @@
-﻿namespace Herc.Pwa.Client.Features.Erc1155.Die
+﻿namespace MintingUi.Client.Features.Erc1155.Die
 {
   using Microsoft.AspNetCore.Components;
   using MintingUi.Client.Features.Base.Components;

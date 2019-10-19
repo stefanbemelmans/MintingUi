@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Herc.Pwa.Client.Features.Erc1155.Transactions
+namespace MintingUi.Client.Features.Erc1155.Transactions
 {
   public class Transaction
   {

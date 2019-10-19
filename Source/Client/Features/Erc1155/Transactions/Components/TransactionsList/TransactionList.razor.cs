@@ -1,6 +1,6 @@
-﻿namespace Herc.Pwa.Client.Features.Erc1155.Transactions.Components.TransactionsList
+﻿namespace MintingUi.Client.Features.Erc1155.Transactions.Components.TransactionsList
 {
-  using Herc.Pwa.Client.Features.Erc1155.Transactions;
+  using MintingUi.Client.Features.Erc1155.Transactions;
   using Microsoft.AspNetCore.Components;
   using System.Collections.Generic;
   using MintingUi.Client.Features.Base.Components;

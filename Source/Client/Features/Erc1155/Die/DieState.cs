@@ -1,7 +1,7 @@
-﻿namespace Herc.Pwa.Client.Features.Erc1155.Die
+﻿namespace MintingUi.Client.Features.Erc1155.Die
 {
   using BlazorState;
-  using Herc.Pwa.Client.Features.Erc1155.Currencies;
+  using MintingUi.Client.Features.Erc1155.Currencies;
   using System;
   using System.Collections.Generic;
   using System.Linq;

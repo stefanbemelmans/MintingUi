@@ -1,8 +1,8 @@
-﻿namespace Herc.Pwa.Client.Pages.Explorer.Currencies
+﻿namespace MintingUi.Client.Pages.Explorer.Currencies
 {
   using MintingUi.Client.Features.Base.Components;
-  using Herc.Pwa.Client.Features.Erc1155.Die;
-  using Herc.Pwa.Client.Features.Erc1155.Token;
+  using MintingUi.Client.Features.Erc1155.Die;
+  using MintingUi.Client.Features.Erc1155.Token;
   using Microsoft.AspNetCore.Components;
   using System;
   using System.Collections.Generic;

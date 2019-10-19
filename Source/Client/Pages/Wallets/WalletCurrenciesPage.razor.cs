@@ -1,4 +1,4 @@
-﻿namespace Herc.Pwa.Client.Pages.Wallets
+﻿namespace MintingUi.Client.Pages.Wallets
 {
   using MintingUi.Client.Features.Base.Components;
   using Microsoft.AspNetCore.Components;
@@ -7,7 +7,7 @@
   {
    public const string Route = "/WalletId/currencies";
 
-    public string WalletId => EdgeCurrencyWalletsState.SelectedEdgeCurrencyWalletId;
+    public string WalletId => "FakeWalletIDForNow";
 
 
 

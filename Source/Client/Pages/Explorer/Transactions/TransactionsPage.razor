@@ -39,12 +39,12 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div class="tab-pane @(ActiveTab=="transactions" ? "active": "")" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
-      <Herc.Pwa.Client.Features.Erc1155.Transactions.Components.TransactionsList.TransactionList Transactions=@Transactions />
+      <MintingUi.Client.Features.Erc1155.Transactions.Components.TransactionsList.TransactionList Transactions=@Transactions />
     </div>
-    <div class="tab-pane @(ActiveTab=="pending-transactions" ? "active": "")" id="pending" role="tabpanel" aria-labelledby="pending-tab"><Herc.Pwa.Client.Features.Erc1155.Transactions.Components.TransactionsList.PendingTransactionsList Transactions=@Transactions /></div>
-    <div class="tab-pane @(ActiveTab=="internal-transactions" ? "active": "")" id="internal" role="tabpanel" aria-labelledby="internal-tab"><Herc.Pwa.Client.Features.Erc1155.Transactions.Components.TransactionsList.InternalTransactionsList Transactions=@Transactions /></div>
-    <div class="tab-pane @(ActiveTab=="token-transfers" ? "active": "")" id="token" role="tabpanel" aria-labelledby="token-transfers-tab"><Herc.Pwa.Client.Features.Erc1155.Transactions.Components.TransactionsList.TokenTransferList Transactions=@Transactions /></div>
-    <div class="tab-pane @(ActiveTab=="asset-transfers" ? "active": "")" id="asset" role="tabpanel" aria-labelledby="asset-transfers-tab"><Herc.Pwa.Client.Features.Erc1155.Transactions.Components.TransactionsList.AssetTransferList Transactions=@Transactions /></div>
+    <div class="tab-pane @(ActiveTab=="pending-transactions" ? "active": "")" id="pending" role="tabpanel" aria-labelledby="pending-tab"><MintingUi.Client.Features.Erc1155.Transactions.Components.TransactionsList.PendingTransactionsList Transactions=@Transactions /></div>
+    <div class="tab-pane @(ActiveTab=="internal-transactions" ? "active": "")" id="internal" role="tabpanel" aria-labelledby="internal-tab"><MintingUi.Client.Features.Erc1155.Transactions.Components.TransactionsList.InternalTransactionsList Transactions=@Transactions /></div>
+    <div class="tab-pane @(ActiveTab=="token-transfers" ? "active": "")" id="token" role="tabpanel" aria-labelledby="token-transfers-tab"><MintingUi.Client.Features.Erc1155.Transactions.Components.TransactionsList.TokenTransferList Transactions=@Transactions /></div>
+    <div class="tab-pane @(ActiveTab=="asset-transfers" ? "active": "")" id="asset" role="tabpanel" aria-labelledby="asset-transfers-tab"><MintingUi.Client.Features.Erc1155.Transactions.Components.TransactionsList.AssetTransferList Transactions=@Transactions /></div>
   </div>
 </div>
 

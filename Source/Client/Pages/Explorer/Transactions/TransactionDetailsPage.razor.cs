@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Herc.Pwa.Client.Pages.Explorer.Transactions
+namespace MintingUi.Client.Pages.Explorer.Transactions
 {
     public class TransactionDetailsPageBase : BaseComponent
     {

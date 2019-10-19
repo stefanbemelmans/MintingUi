@@ -1,7 +1,7 @@
-﻿namespace Herc.Pwa.Client.Features.Erc1155.Wallet
+﻿namespace MintingUi.Client.Features.Erc1155.Wallet
 {
   using BlazorState;
-  using Herc.Pwa.Client.Features.Erc1155.Currencies;
+  using MintingUi.Client.Features.Erc1155.Currencies;
   
   using System;
   using System.Collections.Generic;

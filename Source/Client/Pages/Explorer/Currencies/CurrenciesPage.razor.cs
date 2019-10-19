@@ -1,8 +1,8 @@
-﻿namespace Herc.Pwa.Client.Pages.Explorer.Currencies
+﻿namespace MintingUi.Client.Pages.Explorer.Currencies
 {
   using MintingUi.Client.Features.Base.Components;
   using System.Collections.Generic;
-  using Herc.Pwa.Client.Features.Erc1155.Currencies;
+  using MintingUi.Client.Features.Erc1155.Currencies;
 
   public class CurrenciesPageBase : BaseComponent
   {

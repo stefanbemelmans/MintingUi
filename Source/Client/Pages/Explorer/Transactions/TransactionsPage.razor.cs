@@ -1,7 +1,7 @@
-﻿namespace Herc.Pwa.Client.Pages.Explorer.Transactions
+﻿namespace MintingUi.Client.Pages.Explorer.Transactions
 {
   using MintingUi.Client.Features.Base.Components;
-  using Herc.Pwa.Client.Features.Erc1155.Transactions;
+  using MintingUi.Client.Features.Erc1155.Transactions;
   using Microsoft.AspNetCore.Components;
   using System.Collections.Generic;
   using System.Linq;

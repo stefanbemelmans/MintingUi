@@ -1,4 +1,4 @@
-﻿namespace Herc.Pwa.Client.Features.Erc1155.Token.Components
+﻿namespace MintingUi.Client.Features.Erc1155.Token.Components
 {
   using MintingUi.Client.Features.Base.Components;
   using System.Collections.Generic;

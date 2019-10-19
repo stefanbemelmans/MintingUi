@@ -1,4 +1,4 @@
-﻿namespace Herc.Pwa.Client.Features.Erc1155.Transactions.Components.TransactionsList
+﻿namespace MintingUi.Client.Features.Erc1155.Transactions.Components.TransactionsList
 {
   using MintingUi.Client.Features.Base;
   using MintingUi.Client.Features.Base.Components;

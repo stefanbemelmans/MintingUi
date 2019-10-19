@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Herc.Pwa.Client.Features.Erc1155.Token
+namespace MintingUi.Client.Features.Erc1155.Token
 {
   public class AgeOfRustDummyTokens
   {
