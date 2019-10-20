@@ -12,8 +12,8 @@
   {
     public const string Route = "/WalletId/dies/{CurrencyId}";
     
-   [Parameter] public Guid CurrencyId { get; set; }
+   [Parameter] public string CurrencyId { get; set; }
     //public string CurrencyId => RouteState.Route.Split('/').Last();
-    public IReadOnlyList<Die> Dies => DieState.Dies.Where(d => d.CurrencyId == CurrencyId).ToList();
+    public IReadOnlyList<Die> Dies => DieState.Dies.Where(d => d.CurrencyId.ToString() == CurrencyId).ToList();
   }
 }

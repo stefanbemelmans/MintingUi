@@ -7,10 +7,15 @@
   public class WalletCurrenciesPageBase : BaseComponent
   {
     public const string Route = "/WalletId/currencies";
-    [Parameter] public Guid CurrencyId { get; set; }
+    public Guid CurrencyId { get; set; }
 
-    public string WalletDiesRoute => $"/WalletId/dies/{CurrencyId}"; 
+    public string WalletDiesRoute => $"/WalletId/dies/{CurrencyId}";
 
+    public Guid SetCurrencyId(Guid id)
+    {
+      CurrencyId = id;
+      return CurrencyId;
+    }
     //public string RouteBuilder(Guid CurrencyId) => WalletDiesRoute + CurrencyId.ToString();
   }
 }

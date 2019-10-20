@@ -3,11 +3,12 @@
 @inherits WalletDiesPageBase
 
 <h1>Wallet Dies</h1>
-
-@foreach (var Die in Dies)
+@CurrencyId Currancy ID
+@Dies.Count Dies
+@*@foreach (var Die in Dies)*@
 {
 
-  <MintingUi.Client.Features.Erc1155.Die.Components.DieItem DieId="Die.Guid" />
+@*  <MintingUi.Client.Features.Erc1155.Die.Components.DieItem DieId="Die.Guid" />*@
   @*<div class="card text-center">
     <img src=@Die.Image.AbsoluteUri card="card-img-top" alt="@Die.Name Image" width="250">
     <div class="card-body">

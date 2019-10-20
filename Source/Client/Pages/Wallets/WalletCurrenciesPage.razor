@@ -15,13 +15,14 @@
     <div class="col">
      @* <h5 class="card-title"><a class="card-link" href="@WalletDiesPage.Route +  @Currency.Guid" >@Currency.Name</a></h5>*@
       <div class="currency-details">
-     
-        Currency Id: @Currency.Guid
-       Description: @Currency.Description
-        @Currency.Dies.Count(); Dies 
+        ;
+
+        Currency Id: @SetCurrencyId(Currency.Guid)
+        Description: @Currency.Description
+        @Currency.Dies.Count(); Dies
         Minted Tokens @Currency.MintedTokenList.Count();
         <a href="@WalletDiesRoute">Dies</a>
-    </div>
+      </div>
   </div>
 }
 </div>
