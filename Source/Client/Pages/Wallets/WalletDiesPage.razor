@@ -1,21 +1,25 @@
 ﻿@page "/WalletId/dies"
 @page "/WalletId/dies/{CurrencyId}"
 @inherits WalletDiesPageBase
-
+@using MintingUi.Client.Features.Erc1155.Wallets
 <h1>Wallet Dies</h1>
 @CurrencyId Currancy ID
 @Dies.Count Dies
-@*@foreach (var Die in Dies)*@
-{
+<div class="justify-content-around">
 
-@*  <MintingUi.Client.Features.Erc1155.Die.Components.DieItem DieId="Die.Guid" />*@
-  @*<div class="card text-center">
-    <img src=@Die.Image.AbsoluteUri card="card-img-top" alt="@Die.Name Image" width="250">
-    <div class="card-body">
-      <h5 class="card-title"><a class="card-link" href="">@Die.Name</a></h5>
-      <div class="currency-details">
-        @Die.CirculatingSupply Tokens
-      </div>
-    </div>
-  </div>*@
-}
+  @foreach (var Die in Dies)
+  {
+    <WalletDieItem Die=@Die />
+
+    @*  <MintingUi.Client.Features.Erc1155.Die.Components.DieItem DieId="Die.Guid" />*@
+    @*<div class="card text-center">
+        <img src=@Die.Image.AbsoluteUri card="card-img-top" alt="@Die.Name Image" width="250">
+        <div class="card-body">
+          <h5 class="card-title"><a class="card-link" href="">@Die.Name</a></h5>
+          <div class="currency-details">
+            @Die.CirculatingSupply Tokens
+          </div>
+        </div>
+      </div>*@
+  }
+</div>

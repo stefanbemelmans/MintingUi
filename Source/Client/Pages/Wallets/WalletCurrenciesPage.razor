@@ -7,15 +7,14 @@
 @*<span>Wallet Id: @WalletId</span>*@
 <div class="justify-content-around row">
 
-@foreach (var Currency in CurrencyState.Currencies)
-{
-  <div class="p-2">
-    <img src=@Currency.ImageUrl card="card-img-top" alt="@Currency.Name Image" width="250">
-      </div>
+  @foreach (var Currency in CurrencyState.Currencies)
+  { 
+    <div class="p-2">
+      <img src=@Currency.ImageUrl card="card-img-top" alt="@Currency.Name Image" width="250">
+    </div>
     <div class="col">
-     @* <h5 class="card-title"><a class="card-link" href="@WalletDiesPage.Route +  @Currency.Guid" >@Currency.Name</a></h5>*@
+      @* <h5 class="card-title"><a class="card-link" href="@WalletDiesPage.Route +  @Currency.Guid" >@Currency.Name</a></h5>*@
       <div class="currency-details">
-        ;
 
         Currency Id: @SetCurrencyId(Currency.Guid)
         Description: @Currency.Description
@@ -23,6 +22,6 @@
         Minted Tokens @Currency.MintedTokenList.Count();
         <a href="@WalletDiesRoute">Dies</a>
       </div>
-  </div>
-}
+    </div>
+  }
 </div>
