@@ -26,7 +26,7 @@
     public DieState DieState => Store.GetState<DieState>();
 
     public Guid Guid { get; set; }
-
+    
     public string ImageUrl { get; set; }
 
     /// <summary>
@@ -77,6 +77,7 @@
             AgeOfRustDummyTokens.SmokeGrenade,
             AgeOfRustDummyTokens.RustBits
           }
+
         },
 
         new Currency(Store)
@@ -86,6 +87,7 @@
           ImageUrl = "https://cdn.enjinx.io/assets/images/ethereum/platform/custom/5/ec96fc333fa60de1706fd2ab315a708defa8483d.jpg?width=250",
           Name = "War of Crypto",
           WalletId = walletGuid,
+          MintedTokenList = new List<Token>()
         },
         new Currency(Store)
         {
@@ -98,6 +100,7 @@
           ImageUrl = "https://cdn.enjinx.io/assets/images/ethereum/platform/0/apps/8/2aebae67a0393c9fbdb6124d22e9fe26d6a74bc1.jpg?width=250",
           Name = "The Multiverse",
           WalletId = walletGuid,
+          MintedTokenList = new List<Token>()
         },
       };
 

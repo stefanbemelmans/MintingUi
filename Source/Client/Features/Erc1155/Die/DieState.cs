@@ -49,7 +49,7 @@
     public string Description { get; set; }
     public long GroupId { get; set; }
     public Guid Guid { get; set; }
-
+    public Guid DieId { get; set; }
     public long Holders { get; set; }
 
     // Direct

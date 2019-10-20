@@ -4,12 +4,16 @@
   using Microsoft.AspNetCore.Components;
   using System.Collections.Generic;
   using MintingUi.Client.Features.Erc1155.Die;
+  using BlazorState.Features.Routing;
+  using System.Linq;
+  using System;
+
   public class WalletDiesPageBase : BaseComponent
   {
-    public const string Route = "/{WalletId}/dies/{CurrencyId}";
-    [Parameter]
-    public string CurrencyId { get; set; }
-
-   
+    public const string Route = "/WalletId/dies/{CurrencyId}";
+    
+   [Parameter] public Guid CurrencyId { get; set; }
+    //public string CurrencyId => RouteState.Route.Split('/').Last();
+    public IReadOnlyList<Die> Dies => DieState.Dies.Where(d => d.CurrencyId == CurrencyId).ToList();
   }
 }

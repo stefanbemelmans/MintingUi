@@ -10,6 +10,10 @@
   using MintingUi.Client.Features.Counter;
   using MintingUi.Client.Features.EventStream;
   using MintingUi.Client.Features.WeatherForecast;
+  using MintingUi.Client.Features.Erc1155.Currencies;
+  using MintingUi.Client.Features.Erc1155.Die;
+  using MintingUi.Client.Features.Erc1155.Token;
+  using MintingUi.Client.Features.Erc1155.Transactions;
 
   public class Startup
   {
@@ -35,6 +39,10 @@
       aServiceCollection.AddTransient<CounterState>();
       aServiceCollection.AddTransient<EventStreamState>();
       aServiceCollection.AddTransient<WeatherForecastsState>();
+      aServiceCollection.AddTransient<CurrencyState>();
+      aServiceCollection.AddTransient<DieState>();
+      aServiceCollection.AddTransient<TokenState>();
+      aServiceCollection.AddTransient<TransactionState>();
     }
   }
 }

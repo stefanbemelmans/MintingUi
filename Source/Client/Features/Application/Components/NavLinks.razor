@@ -1,11 +1,13 @@
-﻿<ul class="navbar-nav mr-auto">
+﻿@using MintingUi.Client.Pages.Wallets
+<ul class="navbar-nav mr-auto">
+
   <li class="nav-item">
     <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
       <span class="oi oi-home" aria-hidden="true"></span> Home
     </NavLink>
   </li>
   <li class="nav-item">
-    <NavLink class="nav-link" href="@CounterPageBase.Route">
+    <NavLink class="nav-link" href="@WalletCurrenciesPageBase.Route">
       <span class="oi oi-plus" aria-hidden="true"></span> Counter
     </NavLink>
   </li>

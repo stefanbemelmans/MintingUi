@@ -4,19 +4,24 @@
 
 <h1>Wallet Currencies</h1>
 
-<span>Wallet Id: @WalletId</span>
+@*<span>Wallet Id: @WalletId</span>*@
+<div class="justify-content-around row">
 
 @foreach (var Currency in CurrencyState.Currencies)
 {
-  <div class="card text-center">
+  <div class="p-2">
     <img src=@Currency.ImageUrl card="card-img-top" alt="@Currency.Name Image" width="250">
-    <div class="card-body">
+      </div>
+    <div class="col">
      @* <h5 class="card-title"><a class="card-link" href="@WalletDiesPage.Route +  @Currency.Guid" >@Currency.Name</a></h5>*@
       <div class="currency-details">
-        @Currency.Guid Id
-        @Currency.Description
-        @*@Currency.Dies.Count(); Dies (@Currency.MintedTokenList.Count ?? "No") Tokens*@
-      </div>
+     
+        Currency Id: @Currency.Guid
+       Description: @Currency.Description
+        @Currency.Dies.Count(); Dies 
+        Minted Tokens @Currency.MintedTokenList.Count();
+        <a href="@WalletDiesRoute">Dies</a>
     </div>
   </div>
 }
+</div>
