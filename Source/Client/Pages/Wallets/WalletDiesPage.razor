@@ -3,8 +3,13 @@
 @inherits WalletDiesPageBase
 @using MintingUi.Client.Features.Erc1155.Wallets
 <h1>Wallet Dies</h1>
-@CurrencyId Currancy ID
-@Dies.Count Dies
+@CurrencyId Currancy ID <br />
+
+@Dies.Count Dies <br />
+
+<a href=@CreateDieRoute>Create Die</a> 
+
+
 <div class="justify-content-around">
 
   @foreach (var Die in Dies)

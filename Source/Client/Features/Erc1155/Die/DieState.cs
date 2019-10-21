@@ -24,13 +24,14 @@
 
   public class Die
   {
-    private readonly IStore Store;
 
     public string Standard = "ERC-1155 (Herc)";
 
+    public IStore Store;
+
     public Die(IStore aStore)
     {
-      Store = aStore ?? throw new ArgumentNullException(nameof(aStore));
+      Store = aStore;
     }
 
     public object BackgroundColor { get; set; }
@@ -88,7 +89,7 @@
       Store = aStore;
     }
 
-    public Die NewDie { get; set; } // figure it will come in handy during the "New Die Create" process
+    public Die NewDie { get; set; } //  "New Die Create" process
     private List<Die> _Dies { get; set; }
     public IReadOnlyList<Die> Dies => _Dies.AsReadOnly();
 

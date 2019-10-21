@@ -1,22 +1,30 @@
 ﻿namespace MintingUi.Client.Pages.Erc1155
 {
   using BlazorState;
+  using Microsoft.AspNetCore.Components;
   using MintingUi.Client.Features.Base.Components;
   using MintingUi.Client.Features.Erc1155.Die;
-  using Microsoft.AspNetCore.Components;
   using System;
 
-  public class CreateDieBase : BaseComponent
-    {
-     public Die NewDie { get; set; }
-   
-    [Parameter]
-    public Guid CurrencyId { get; set; } // this will come from the Currency that the User selects "Create a New Die" under
+  public class CreateDiePageBase : BaseComponent
+  {
+    public IStore aStore;
+    public string MintDieRoute => $"/WalletId/dies/{CurrencyId}/{DieId}/mint";
 
-    public CreateDieBase(Guid aGuid, IStore aStore)
+    [Parameter] public string CurrencyId { get; set; }
+    [Parameter] public static string DieId { get; set; }
+
+    public long DieCount => 2; /*DieState.Dies.Where(d => d.CurrencyId.ToString() == CurrencyId).Count();*/
+    public Die NewDie { get; set; }
+
+    // this will come from the Currency that the User selects "Create a New Die" under
+
+    public CreateDiePageBase()
     {
       NewDie = new Die(aStore);
-      NewDie.Id = DieState.Dies.Count + 1; 
+      NewDie.Creator = new Creator();
+      NewDie.Guid = new Guid();
+      NewDie.Id = DieCount + 1; /*DieState.Dies.Count + 1*/;
     }
-    }
+  }
 }

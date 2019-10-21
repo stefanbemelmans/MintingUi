@@ -1,9 +1,15 @@
-﻿<div>
+﻿@inherits CreateDiePageBase
+@page "/WalletId/dies/{CurrencyId}/create"
+
+<div>
 Create A Die Page!
   <div class="col-10 col-sm-5">
     New Die Inputs
+    <textarea @bind="@NewDie.Description" />
+
     </div>
-  <div class="col-10 col-sm-5"
+  <div class="col-10 col-sm-5">
        New Die Details
+    <p>@NewDie.Description</p>
   </div>
 </div>
