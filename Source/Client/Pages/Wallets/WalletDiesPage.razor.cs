@@ -15,6 +15,6 @@
    [Parameter] public string CurrencyId { get; set; }
 
     public string CreateDieRoute => $"/WalletId/dies/{CurrencyId}/create";
-    public IReadOnlyList<Die> Dies => DieState.Dies.Where(d => d.CurrencyId.ToString() == CurrencyId).ToList();
+    public IReadOnlyList<Die> Dies => DieState.Dies.Where(aD => aD.CurrencyId.ToString() == CurrencyId).ToList();
   }
 }

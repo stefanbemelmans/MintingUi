@@ -11,17 +11,17 @@
   {
     <div class="p-2 col">
       <div class="text-center pb-1">
-        <a href="@WalletCurrencyDetailsRoute">
+        <a href="@RouteBuilder(Currency.Guid)">
           <img src=@Currency.ImageUrl alt="@Currency.Name Image" width="250">
         </a>
       </div>
-    <div class="">
-      <b>Currency Id:</b> @SetCurrencyId(Currency.Guid)
-      Description: @Currency.Description
-      @Currency.Dies.Count(); Dies
-      Minted Tokens @Currency.MintedTokenList.Count();
-      <a href="@WalletDiesRoute">Dies</a>
-    </div>
+      <div class="">
+        <b>Currency Id:</b> @Currency.Guid
+      <b> Description:</b><p>@Currency.Description</p>
+      <b>Dies</b> @Currency.Dies.Count();
+      <b>Minted Tokens</b> @Currency.MintedTokenList.Count();
+        <a href="@WalletCurrencyDetailsRoute">Dies Page</a>
+      </div>
     </div>
   }
 </div>

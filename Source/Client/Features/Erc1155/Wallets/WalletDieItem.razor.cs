@@ -6,9 +6,8 @@
 
   public class WalletDieItemBase : BaseComponent
   {
+    public string RedeemTokenRoute = "/WalletId/dies/{CurrencyId}/{DieId}";
     [Parameter] public Die Die { get; set; }
     [Parameter] public string DieId { get; set; }
-
-    public string RedeemTokenRoute = "/WalletId/dies/{CurrencyId}/{DieId}";
   }
 }

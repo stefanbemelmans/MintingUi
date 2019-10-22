@@ -10,12 +10,12 @@
     public Guid CurrencyId { get; set; }
 
     public string WalletDiesRoute => $"/WalletId/dies/{CurrencyId}";
-    public string WalletCurrencyDetailsRoute => $"/WalletId/currencies/{CurrencyId}";
-    public Guid SetCurrencyId(Guid id)
-    {
-      CurrencyId = id;
-      return CurrencyId;
-    }
-    //public string RouteBuilder(Guid CurrencyId) => WalletDiesRoute + CurrencyId.ToString();
+    public string WalletCurrencyDetailsRoute => $"/WalletId/currencies/";
+    //public Guid SetCurrencyId(Guid id)
+    //{
+    //  CurrencyId = id;
+    //  return CurrencyId;
+    //}
+    public string RouteBuilder(Guid CurrencyId) => WalletCurrencyDetailsRoute + CurrencyId.ToString();
   }
 }

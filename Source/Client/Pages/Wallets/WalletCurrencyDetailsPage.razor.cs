@@ -5,7 +5,7 @@
 
   public class WalletCurrencyDetailsPageBase : BaseComponent
     {
-        [Parameter] public string CurrencyId { get; set; }
+    [Parameter] public string CurrencyId { get; set; }
 
     }
 }
