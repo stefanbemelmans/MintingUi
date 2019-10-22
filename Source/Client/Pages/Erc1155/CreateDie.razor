@@ -2,10 +2,11 @@
 @page "/WalletId/dies/{CurrencyId}/create"
 @using MintingUi.Client.Features.Erc1155.Die
 
-<h3>
+<h3 class="text-center">
   Create A Die Page!
 </h3>
 <div class="d-flex flex-row p-2">
+  Currency Name: @Currency.Name
   <div class="col-10 col-sm-5 bg-light">
     <div class="p-2 m-2 bg-danger text-left">
       <h4>
@@ -26,7 +27,7 @@
       <h4>
         Token Value:
       </h4>
-      <input type="number" @bind-value=@NewDie.MeltValue  @bind-value:event="oninput" placeholder="Token Value" />
+      <input type="number" @bind-value=@NewDie.MeltValue @bind-value:event="oninput" placeholder="Token Value" />
       @NewDie.MeltValueType
     </div>
 
@@ -34,30 +35,39 @@
       <h4>
         Token Transferability:
       </h4>
-      <select bind="@NewDie.Transferable">
-        <option value=@Transferable.Permanent>Permanent</option>
-        <option value=@Transferable.Temporary>Temporary</option>
-      </select>
+      <input type="text"
+             @bind-value=@NewDie.Transferable
+             @bind-value:event="oninput"
+             placeholder="Permanent" />
+
+      @*<select bind="@NewDie.Transferable">
+          <option value=@Transferable.Permanent>Permanent</option>
+          <option value=@Transferable.Temporary>Temporary</option>
+        </select>*@
     </div>
     <div class="p-2 m-2 bg-danger text-left">
       <h4>
         Token Supply Model:
       </h4>
-      <select bind="@NewDie.SupplyModel">
-        <option value=@SupplyModel.Collapsing>Collapsing</option>
-        <option value=@SupplyModel.Fixed>Fixed</option>
-        <option value=@SupplyModel.Infinite>Infinite</option>
-        <option value=@SupplyModel.Infinite>Infinite</option>
-      </select>
+      <input type="text"
+             @bind-value=@NewDie.SupplyModel
+             @bind-value:event="oninput"
+             placeholder=@SupplyModel.Fixed />
+
+      @*<select bind="@NewDie.SupplyModel">
+          <option value=@SupplyModel.Collapsing>Collapsing</option>
+          <option value=@SupplyModel.Fixed>Fixed</option>
+          <option value=@SupplyModel.Infinite>Infinite</option>
+                </select>*@
     </div>
     <div class="p-2 m-2 bg-danger text-left">
       <b>Fungibility</b>
       Non-Fungible:
-      <input type="checkbox" @bind="@NewDie.NonFungible" />
+      <input type="checkbox" @bind-value="@NewDie.NonFungible" @bind-value:event="onchange" />
     </div>
     <div class="p-2 m-2 bg-danger text-left">
       <b>Total Supply</b>
-      <input type="number" @bind="@NewDie.TotalSupply" />
+      <input type="number" @bind-value=@NewDie.TotalSupply @bind-value:event="oninput" />
     </div>
   </div>
 
@@ -76,7 +86,7 @@
       </div>
     </div>
     <div class="text-left pl-2 m-2 bg-info">
-      <h4>Die SupplyModel</h4>
+      <h4>Token SupplyModel</h4>
       <p class="text-dark">@NewDie.SupplyModel</p>
     </div>
     <div class="text-left pl-2 m-2 bg-info">
@@ -84,12 +94,13 @@
       <p class="text-dark">@NewDie.Transferable</p>
     </div>
     <div class="text-left pl-2 m-2 bg-info">
-      <h4>Total Token Supply</h4>
+      <h4>Total Token Supply and Fungibility</h4>
       <p class="text-dark">@NewDie.TotalSupply</p>
+      NonFugible: @NewDie.NonFungible
     </div>
     <div class="text-left pl-2 m-2 bg-info">
       <h4>Melt Value</h4>
-      <p class="text-dark">@NewDie.MeltValue of @NewDie.MeltValueType </p>
+      <p class="text-dark">@NewDie.MeltValue @NewDie.MeltValueType = @EthPrice(NewDie.MeltValue) USD</p>
     </div>
   </div>
 </div>

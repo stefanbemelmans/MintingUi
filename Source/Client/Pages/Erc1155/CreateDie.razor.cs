@@ -3,6 +3,7 @@
   using BlazorState;
   using Microsoft.AspNetCore.Components;
   using MintingUi.Client.Features.Base.Components;
+  using MintingUi.Client.Features.Erc1155.Currencies;
   using MintingUi.Client.Features.Erc1155.Die;
   using System;
 
@@ -20,6 +21,9 @@
     public string NewDieTempImageString { get; set; }
     // this will come from the Currency that the User selects "Create a New Die" under
 
+    public Currency Currency => CurrencyState.Where
+
+    public double EthPrice(double eth) => (eth * 174.84);
     //public void SetSupplyModel(ChangeEventArgs e) => NewDie.SupplyModel = e.Value;
     public CreateDiePageBase()
     {
