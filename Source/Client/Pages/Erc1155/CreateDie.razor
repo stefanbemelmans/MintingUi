@@ -1,15 +1,95 @@
 ﻿@inherits CreateDiePageBase
 @page "/WalletId/dies/{CurrencyId}/create"
+@using MintingUi.Client.Features.Erc1155.Die
 
-<div>
-Create A Die Page!
-  <div class="col-10 col-sm-5">
-    New Die Inputs
-    <textarea @bind="@NewDie.Description" />
-
+<h3>
+  Create A Die Page!
+</h3>
+<div class="d-flex flex-row p-2">
+  <div class="col-10 col-sm-5 bg-light">
+    <div class="p-2 m-2 bg-danger text-left">
+      <h4>
+        Die Image Url
+      </h4>
+      <input @bind-value=@NewDieTempImageString @bind-value:event="oninput" />
     </div>
-  <div class="col-10 col-sm-5">
-       New Die Details
-    <p>@NewDie.Description</p>
+
+    <div class="p-2 m-2 bg-danger text-left">
+      <h4>
+        Die Name And Description
+      </h4>
+      <b>Die Name</b>
+      <input @bind="@NewDie.Name" />
+      <textarea class="w-100" @bind-value=@NewDie.Description @bind-value:event="oninput" />
+    </div>
+    <div class="p-2 m-2 bg-danger text-left">
+      <h4>
+        Token Value:
+      </h4>
+      <input type="number" @bind-value=@NewDie.MeltValue  @bind-value:event="oninput" placeholder="Token Value" />
+      @NewDie.MeltValueType
+    </div>
+
+    <div class="p-2 m-2 bg-danger text-left">
+      <h4>
+        Token Transferability:
+      </h4>
+      <select bind="@NewDie.Transferable">
+        <option value=@Transferable.Permanent>Permanent</option>
+        <option value=@Transferable.Temporary>Temporary</option>
+      </select>
+    </div>
+    <div class="p-2 m-2 bg-danger text-left">
+      <h4>
+        Token Supply Model:
+      </h4>
+      <select bind="@NewDie.SupplyModel">
+        <option value=@SupplyModel.Collapsing>Collapsing</option>
+        <option value=@SupplyModel.Fixed>Fixed</option>
+        <option value=@SupplyModel.Infinite>Infinite</option>
+        <option value=@SupplyModel.Infinite>Infinite</option>
+      </select>
+    </div>
+    <div class="p-2 m-2 bg-danger text-left">
+      <b>Fungibility</b>
+      Non-Fungible:
+      <input type="checkbox" @bind="@NewDie.NonFungible" />
+    </div>
+    <div class="p-2 m-2 bg-danger text-left">
+      <b>Total Supply</b>
+      <input type="number" @bind="@NewDie.TotalSupply" />
+    </div>
+  </div>
+
+  <div class="col-10 col-sm-5 bg-success p-2">
+    <h3 class="text-center">
+      New Die Details
+    </h3>
+    <div class="text-left pl-2 m-2 bg-info">
+
+      <h4 class="m-2 w-100">Name: @NewDie.Name</h4>
+      <div class="m-2 text-center">
+
+        <img class="p-2" src=@NewDieTempImageString alt="" width="250" />
+
+        <p class="text-dark text-left"><b>Die Description</b> @NewDie.Description</p>
+      </div>
+    </div>
+    <div class="text-left pl-2 m-2 bg-info">
+      <h4>Die SupplyModel</h4>
+      <p class="text-dark">@NewDie.SupplyModel</p>
+    </div>
+    <div class="text-left pl-2 m-2 bg-info">
+      <h4>Token Transferability</h4>
+      <p class="text-dark">@NewDie.Transferable</p>
+    </div>
+    <div class="text-left pl-2 m-2 bg-info">
+      <h4>Total Token Supply</h4>
+      <p class="text-dark">@NewDie.TotalSupply</p>
+    </div>
+    <div class="text-left pl-2 m-2 bg-info">
+      <h4>Melt Value</h4>
+      <p class="text-dark">@NewDie.MeltValue of @NewDie.MeltValueType </p>
+    </div>
   </div>
 </div>

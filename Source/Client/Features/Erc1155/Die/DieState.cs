@@ -72,6 +72,7 @@
     public object SendType { get; set; }
     public SupplyModel SupplyModel { get; set; }
     public string Token { get; set; }
+    public string MeltValueType { get; set; } = "Eth";
     public long TokenIndex { get; set; }
     public long? TotalSupply { get; set; }
     public Transferable Transferable { get; set; }

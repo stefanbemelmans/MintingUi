@@ -11,20 +11,23 @@
     public IStore aStore;
     public string MintDieRoute => $"/WalletId/dies/{CurrencyId}/{DieId}/mint";
 
+    //public SupplyModel SupplyModel { get; set; }
     [Parameter] public string CurrencyId { get; set; }
     [Parameter] public static string DieId { get; set; }
 
     public long DieCount => 2; /*DieState.Dies.Where(d => d.CurrencyId.ToString() == CurrencyId).Count();*/
     public Die NewDie { get; set; }
-
+    public string NewDieTempImageString { get; set; }
     // this will come from the Currency that the User selects "Create a New Die" under
 
+    //public void SetSupplyModel(ChangeEventArgs e) => NewDie.SupplyModel = e.Value;
     public CreateDiePageBase()
     {
       NewDie = new Die(aStore);
       NewDie.Creator = new Creator();
       NewDie.Guid = new Guid();
       NewDie.Id = DieCount + 1; /*DieState.Dies.Count + 1*/;
+      NewDieTempImageString = "https://via.placeholder.com/150";
     }
   }
 }
