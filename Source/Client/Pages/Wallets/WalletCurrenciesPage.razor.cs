@@ -10,7 +10,7 @@
     public Guid CurrencyId { get; set; }
 
     public string WalletDiesRoute => $"/WalletId/dies/{CurrencyId}";
-
+    public string WalletCurrencyDetailsRoute => $"/WalletId/currencies/{CurrencyId}";
     public Guid SetCurrencyId(Guid id)
     {
       CurrencyId = id;

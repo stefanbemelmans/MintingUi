@@ -6,6 +6,7 @@
   using MintingUi.Client.Features.Erc1155.Currencies;
   using MintingUi.Client.Features.Erc1155.Die;
   using System;
+  using System.Linq;
 
   public class CreateDiePageBase : BaseComponent
   {
@@ -21,7 +22,7 @@
     public string NewDieTempImageString { get; set; }
     // this will come from the Currency that the User selects "Create a New Die" under
 
-    public Currency Currency => CurrencyState.Where
+    public Currency Currency => CurrencyState.Currencies.FirstOrDefault(aCurrency => aCurrency.Guid.ToString() == CurrencyId);
 
     public double EthPrice(double eth) => (eth * 174.84);
     //public void SetSupplyModel(ChangeEventArgs e) => NewDie.SupplyModel = e.Value;
