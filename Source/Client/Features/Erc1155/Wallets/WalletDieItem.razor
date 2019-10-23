@@ -1,17 +1,16 @@
 ﻿@inherits WalletDieItemBase
 
-  <div class="p-2 d-flex flex-row">
-    <img src=@Die.Image card="card-img-top" alt="@Die.Name Image" width="250">
-    @* <h5 class="card-title"><a class="card-link" href="@WalletDiesPage.Route +  @Die.Guid" >@Die.Name</a></h5>*@
-    <div class="flex-column">
-      <div class="currency-details">
-        Currency Id: @Die.CurrencyId<br />
-        Description: @Die.Description<br />
-        @Die.Id<br />
-        Circulating Supply: @Die.CirculatingSupply<br />
-        Total Supply:  @Die.TotalSupply<br />
-        Redeem Value: @Die.MeltValue
-        <a href="@RedeemTokenRoute">Redeem</a>
-      </div>
-    </div>
+<div class="p-2 d-flex flex-row">
+  <img src=@Die.Image card="card-img-top" alt="@Die.Name Image" width="250">
+  @* <h5 class="card-title"><a class="card-link" href="@WalletDiesPage.Route +  @Die.Guid" >@Die.Name</a></h5>*@
+  <div class="flex-column text-left p-2">
+
+    Currency Id: @Die.CurrencyId<br />
+    Description: @Die.Description<br />
+    @Die.Id<br />
+    Circulating Supply: @Die.CirculatingSupply<br />
+    Total Supply:  @Die.TotalSupply<br />
+    Redeem Value: @Die.MeltValue
+    <a href="@RedeemTokenRoute">Redeem</a>
   </div>
+</div>

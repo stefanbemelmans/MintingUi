@@ -1,14 +1,21 @@
 ﻿@inherits CurrencyDetailsBase
-<div class="card text-center">
+<div class="p-2 d-flex flex-row">
   <img src=@Currency.ImageUrl card="card-img-top" alt="@Currency.Name Image" width="250">
   <div class="card-body">
     <h5 class="card-title">@Currency.Name</h5>
-    <div class="currency-details">
-      <b>Currency ID: </b> @CurrencyId
-      <b>Currency Description</b>@Currency.Description
-      <b>Total Dies</b> @Dies.Count
-      <b>Total Minted Tokens</b> @TotalTokens
-      <b>Total Value</b> @TotalValue
+    <div class="d-flex flex-column">
+      <span class="row"><b>Currency ID: </b> @CurrencyId</span>
+      <span class="row">
+        <b>Currency Description</b>@Currency.Description
+      </span>
+      <span class="row">
+        <b>Total Dies  </b> @Dies.Count
+      </span>
+      <span class="row">
+        <b>Total Minted Tokens  </b> @TotalTokens
+      </span>
+      <span class="row"><b>Total Value  </b> @TotalValue</span>
     </div>
   </div>
 </div>
+

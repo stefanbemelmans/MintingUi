@@ -10,11 +10,11 @@
 
   public class WalletDiesPageBase : BaseComponent
   {
-    //public string Route = $"/WalletId/dies/{CurrencyId}";
-    
+    public static string Route = "/WalletId/dies/";
+
    [Parameter] public string CurrencyId { get; set; }
 
-    public string CreateDieRoute => $"/WalletId/dies/{CurrencyId}/create";
+    public string CreateDieRoute => $"{Route}{CurrencyId}/create";
     public IReadOnlyList<Die> Dies => DieState.Dies.Where(aD => aD.CurrencyId.ToString() == CurrencyId).ToList();
   }
 }
